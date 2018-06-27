@@ -11,6 +11,10 @@ import java.util.concurrent.Future;
  */
 @Component
 public class AsyncTaskCallBack extends AbstractTask {
+    /**
+     * 指定线程池的名字
+     * @return
+     */
     @Async("taskExecutor")
     public Future<String> taskOne() {
         super.task1();
