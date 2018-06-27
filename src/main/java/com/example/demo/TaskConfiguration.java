@@ -35,6 +35,15 @@ public class TaskConfiguration {
          */
 
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
+        /**
+         * 线程池关闭的时候等待所有任务都完成之后才销毁其他bean对象
+         */
+        executor.setWaitForTasksToCompleteOnShutdown(true);
+        /**
+         * 设置线程池中任务的等待时间
+         * 如果超过这个时间，线程池会强制关闭，避免被阻塞
+         */
+        executor.setAwaitTerminationSeconds(60);
         return executor;
     }
 }
