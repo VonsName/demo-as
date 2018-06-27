@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * @author ASUS
- * 线程池
+ * 任务线程池
  */
 @Configuration
 public class TaskConfiguration {
